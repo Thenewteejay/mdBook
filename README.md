@@ -1,8 +1,9 @@
 
 # 📚 LifeTechies Book Management Module
 
-A simple and educational **Book Management System** built using **PHP**, **Bootstrap**, and **DataTables**.  
+A simple and educational *Book Management System* built using *PHP*, *Bootstrap*, and *DataTables*.  
 This project is designed for LifeTechies trainees to learn CRUD operations, form handling, JSON data manipulation, and working with frontend data tables.
+
 ---
 
 ## 📁 Project Structure
@@ -71,6 +72,9 @@ composer create-project lifetechocms/lifetechocms "your-project-name"
 - **DataTables Integration:** Enhances the display table with search, pagination, export, and responsive UI.
 - JSON Persistence: Response is stored in json.
 - **Controller Design Pattern:** BookController manages all book-related operations.
+- **MVC Structure:** Separation of View, Controller, and Model for clean architecture
+
+.
 
 ---
 
