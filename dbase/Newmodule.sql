@@ -1,0 +1,1 @@
+INSERT INTO module_tbl(module_name, module_image, status, date_created, last_update) VALUES('mdBook','N','Enabled','2025-07-23 05:43:39','2025-07-25 05:54:34');;;;;_lifetechend;;;;;

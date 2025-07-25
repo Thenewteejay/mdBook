@@ -1,0 +1,74 @@
+{%
+    ltImport('mdLt', 'LtNavigate.php');
+    $navigate = new LtNavigate(); 
+    $request = new LtRequest;
+    $bookId = $request->bookId;
+    
+    if(empty($bookId)) LtNavigate::to('TbBookView.html', 'mdBook')->redirect();
+%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Module</title>
+ 
+  <style>
+
+    .card {
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-label {
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5 card p-4">
+  
+    <!--<hr class="my-4">-->
+
+    <h4 class="text-center mb-4">✏️ Edit Book</h4>
+    
+    <form action="/books/edit" method="POST">
+        <input type="hidden" name="_method" value="PATCH"/>
+        <input type="hidden" name="_formType" value="webview"/>
+      <div class="mb-3">
+        <label class="form-label">Book ID</label>
+        <input type="number" class="form-control" value="<?= $bookId ?>" disabled>
+        <input type="hidden" name="bookId" value="<?= $bookId ?>"> 
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">New Title</label>
+        <input type="text" name="title" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">New Author</label>
+        <input type="text" name="author" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">New Year</label>
+        <input type="number" name="year" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-warning w-100">Edit</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
+
+      
+      
+      
+      
+      
+      

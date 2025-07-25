@@ -1,0 +1,57 @@
+{%
+    ltImport('mdLt', 'LtNavigate.php');
+    $request = new LtRequest;
+    $bookId = $request->bookId;
+    
+    if(empty($bookId)) LtNavigate::to('TbBookView.html', 'mdBook')->redirect();
+    
+%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Module</title>
+ 
+  <style>
+
+    .card {
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-label {
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5 card p-4">
+
+    <h4 class="text-center mb-4 text-danger">🗑️ Delete Book</h4>
+    <form action="/books/delete" method="POST">
+        <input type="hidden" name="_method" value="DELETE"/>
+        <input type="hidden" name="_formType" value="webview"/>
+      <div class="mb-3">
+        <label class="form-label">Book ID</label>
+        <input type="number" class="form-control" value="{! $bookId !}" disabled >
+        <input type="hidden" name="bookId" value="<?= $bookId ?>"> 
+      </div>
+
+      <button type="submit" class="btn btn-danger w-100">Delete</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+      
+      
+      
+      
+      
+      
+      
+      

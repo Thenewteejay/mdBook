@@ -1,0 +1,63 @@
+{%
+    ltImport('mdLt', 'LtNavigate.php');
+%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Module</title>
+ 
+  <style>
+
+    .card {
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-label {
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5 card p-4">
+    <h4 class="text-center mb-4">📘 Register Book</h4>
+            <div class="alert alert-success text-center">
+             {! ltNavigateData('registerBook') !}
+            </div> 
+    <form action="/books/registration" method="POST">
+        <input type="hidden" name="_formType" value="webview"/>
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" name="title" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text" name="author" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Year</label>
+        <input type="number" name="year" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
