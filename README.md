@@ -83,7 +83,7 @@ composer create-project lifetechocms/lifetechocms "your-project-name"
 ### Base path: `/api/books/`
 
 ```http
-POST /api/books/create
+POST /api/books
 ```
 🔐 Register book with valid data.  
 **Controller:** `TbBookController@bookRegistration`
@@ -146,7 +146,7 @@ PATCH /api/books/edit
 ---
 
 ```http
-DELETE /api/books/delete
+DELETE /api/books
 ```
 🔁 Delete regeistered user.  
 **Controller:** `TbBookController@deleteBook`
