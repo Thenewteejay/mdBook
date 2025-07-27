@@ -39,8 +39,8 @@
                                 <td>{! $book->author !}</td>
                                 <td>{! $book->year !}</td>
                                 <td>
-                                      <a href="edit-book?bookId={! $book->ltId !}" class="btn btn-primary" title="Click to edit"><i class="bi bi-pen"></i></a>
-                                      <a href="delete-book?bookId={! $book->ltId !}" class="btn btn-danger" title="Click to delete"><i class="bi bi-trash3"></i></a>
+                                      <a href="form-edit?bookId={! $book->ltId !}" class="btn btn-primary" title="Click to edit"><i class="bi bi-pen"></i></a>
+                                      <a href="form-delete?bookId={! $book->ltId !}" class="btn btn-danger" title="Click to delete"><i class="bi bi-trash3"></i></a>
                                 </td>
                             </tr>
                           {% $counter++ %}
@@ -60,5 +60,6 @@
         </div>
     </div>
 </section>
+      
       
       
