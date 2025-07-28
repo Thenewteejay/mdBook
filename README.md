@@ -16,7 +16,7 @@ This project is designed for LifeTechies trainees to learn CRUD operations, form
 │   ├── DeleteBook.html               # Delete registered book by id
 
 ├── 📁 Controller
-│   ├── MdlLtLoginRoute.php           # Route mappings for API endpoints
+│   ├── MdBookRoute.php               # Route mappings for API endpoints
 │   └── TbBookController.php          # Handles Application logic
 
 ├── 📁 Model
